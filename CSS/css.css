@@ -1,0 +1,100 @@
+
+body,html{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.main-wrap{
+    margin: 32px auto;
+    padding: 32px;
+    width: 100%;
+    max-width: 700px;
+    border: 1px #000 solid;
+}
+
+.img{
+    flex: 1;
+    max-width: 200px;
+    height: 200px;
+}
+
+.img img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+}
+
+.user-info {
+    display: flex;
+}
+
+.user-info .info {
+    display: flex;
+    flex: 1;
+    margin-left: 32px;
+}
+
+.name-date{
+    flex: 1;
+}
+
+.follow-following{
+    margin-left: 32px;
+}
+
+.name, .date, .follow, .following{
+    padding: 8px;
+    margin-top: 10px;
+    border-bottom: 1px solid black;
+}
+
+.follow, .following{
+    border: 0;
+}
+
+.follow spam, .following spam{
+    margin-left: 24px;
+}
+
+
+.table{
+    margin-top: 32px;
+    border: 1px solid black;
+}
+
+table{
+    width: 100%;
+    counter-reset: step;
+}
+
+td, th{
+    padding: 4px;
+    border-bottom: 1px solid black;
+}
+
+tr:last-child td{
+    border-bottom: 0;
+}
+
+td:first-child,
+th:first-child{
+    width: 24px;
+    border-right: 1px black solid;
+}
+
+table tr{
+    position: relative;
+}
+ 
+
+table tbody td:first-child::before {
+    counter-increment: step;
+    content: counter(step, decimal);
+    position: absolute;
+    left: 10px;
+    top: 4px;
+}
